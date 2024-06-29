@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/twallpaper@latest/dist/style.css">
     <style>
+        body {
+            background-color: #333; /* Dark background */
+        }
         .btn-custom {
             width: 100%;
             margin-bottom: 10px;
@@ -29,20 +32,28 @@
             height: 100%;
             z-index: -1;
         }
+        .card-custom {
+            background-color: #fff; /* Light background for the card */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
     <div class="tw-wrap"></div>
     <div class="container text-center mt-5">
-        <h1>Welcome to Our Landing Page</h1>
-        <p class="lead">Connect with us on Telegram and WhatsApp</p>
-        <div class="mt-4 d-flex flex-column flex-sm-row justify-content-center">
-            <a href="https://t.me/your_telegram_chat" class="btn btn-primary btn-lg btn-custom">
-                <i class="fab fa-telegram-plane"></i> Join our Telegram Chat
-            </a>
-            <a href="https://wa.me/your_whatsapp_number" class="btn btn-success btn-lg btn-custom">
-                <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
-            </a>
+        <div class="card card-custom mx-auto">
+            <h1>Welcome to Our Landing Page</h1>
+            <p class="lead">Connect with us on Telegram and WhatsApp</p>
+            <div class="mt-4 d-flex flex-column flex-sm-row justify-content-center">
+                <a href="https://t.me/your_telegram_chat" class="btn btn-primary btn-lg btn-custom">
+                    <i class="fab fa-telegram-plane"></i> Join our Telegram Chat
+                </a>
+                <a href="https://wa.me/your_whatsapp_number" class="btn btn-success btn-lg btn-custom">
+                    <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+                </a>
+            </div>
         </div>
     </div>
     <!-- Bootstrap JS and dependencies -->
