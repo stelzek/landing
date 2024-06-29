@@ -53,14 +53,15 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const container = document.querySelector('.tw-wrap');
-            const wallpaper = TWallpaper.init(container, {
-                colors: [
-                    '#dbddbb',
-                    '#6ba587',
-                    '#d5d88d',
-                    '#88b884'
-                ]
-            });
+            const options = {
+                colors: ['#dbddbb', '#6ba587', '#d5d88d', '#88b884'],
+                animate: true,
+                fps: 30,
+                tails: 90,
+                scrollAnimate: true
+            };
+            const wallpaper = new TWallpaper(container, options);
+            wallpaper.init();
         });
     </script>
 </body>
