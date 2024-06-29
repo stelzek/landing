@@ -58,7 +58,12 @@
                 animate: true,
                 fps: 30,
                 tails: 90,
-                scrollAnimate: true
+                scrollAnimate: true,
+                pattern: {
+                    mask: true,
+                    size: '420px',
+                    image: 'https://twallpaper.js.org/patterns/space.svg'
+                }
             };
             const wallpaper = new TWallpaper.TWallpaper(container, options);
             wallpaper.init();
