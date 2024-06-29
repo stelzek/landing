@@ -52,21 +52,18 @@
     <script src="https://cdn.jsdelivr.net/npm/twallpaper@latest/dist/index.umd.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            import { TWallpaper } from 'twallpaper'
+
             const container = document.querySelector('.tw-wrap');
-            if (window.TWallpaper) {
-                const wallpaper = new window.TWallpaper(container, {
-                    colors: [
-                        '#dbddbb',
-                        '#6ba587',
-                        '#d5d88d',
-                        '#88b884'
-                    ]
-                });
-                wallpaper.init();
-            } else {
-                console.error('TWallpaper is not available.');
-                console.log(TWallpaper);
-            }
+            const wallpaper = new TWallpaper(container, {
+                colors: [
+                    '#dbddbb',
+                    '#6ba587',
+                    '#d5d88d',
+                    '#88b884'
+                ]
+            });
+            wallpaper.init();
         });
     </script>
 </body>
