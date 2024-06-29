@@ -8,11 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/twallpaper@latest/dist/twallpaper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/twallpaper@0.1.3/dist/twallpaper.min.css">
     <style>
-        body {
-            background: #f3f3f3;
-        }
         .btn-custom {
             width: 100%;
             margin-bottom: 10px;
@@ -26,9 +23,16 @@
                 margin-left: 15px;
             }
         }
+        .tw-wrap {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
+    <div class="tw-wrap"></div>
     <div class="container text-center mt-5">
         <h1>Welcome to Our Landing Page</h1>
         <p class="lead">Connect with us on Telegram and WhatsApp</p>
@@ -45,9 +49,19 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/twallpaper@0.1.3/dist/twallpaper.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            twallpaper.init({ target: document.body });
+            const container = document.querySelector('.tw-wrap');
+            const wallpaper = new TWallpaper(container, {
+                colors: [
+                    '#dbddbb',
+                    '#6ba587',
+                    '#d5d88d',
+                    '#88b884'
+                ]
+            });
+            wallpaper.init();
         });
     </script>
 </body>
