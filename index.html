@@ -8,16 +8,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f3f3f3; /* Telegram chat background color */
+        }
+        .btn-custom {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        @media (min-width: 576px) {
+            .btn-custom {
+                width: auto;
+                margin-bottom: 0;
+            }
+            .btn-custom + .btn-custom {
+                margin-left: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container text-center mt-5">
         <h1>Welcome to Our Landing Page</h1>
         <p class="lead">Connect with us on Telegram and WhatsApp</p>
-        <div class="mt-4">
-            <a href="https://t.me/your_telegram_chat" class="btn btn-primary btn-lg">
+        <div class="mt-4 d-flex flex-column flex-sm-row justify-content-center">
+            <a href="https://t.me/your_telegram_chat" class="btn btn-primary btn-lg btn-custom">
                 <i class="fab fa-telegram-plane"></i> Join our Telegram Chat
             </a>
-            <a href="https://wa.me/your_whatsapp_number" class="btn btn-success btn-lg ml-3">
+            <a href="https://wa.me/your_whatsapp_number" class="btn btn-success btn-lg btn-custom">
                 <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
             </a>
         </div>
